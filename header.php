@@ -1,5 +1,6 @@
-<?php wp_head() ?>
+<?php wp_head() ?> 
 
+<!-- Header de bootstrap -->
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->

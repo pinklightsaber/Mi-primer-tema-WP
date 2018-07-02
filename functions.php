@@ -1,22 +1,21 @@
 <?php 
-	//Incorporar CSS
 
-	//Estilos CSS
+	////////////Incorporar CSS/////////////
 	function dl_enqueue_style(){
 		$theme_data = wp_get_theme();
 
 		//Registrar estilos de Bootstrap
 		wp_register_style(
-			'bootstrap_css',
-			'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css',
-			null, 
+			'bootstrap_css', 
+			'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', 
+			null, //no hay array
 			$theme_data->get('3.3.7'));
 
 		//Registrar estilos CSS "main.css"
 		wp_register_style(
 			'main', 
 			get_parent_theme_file_uri('/css/main.css'),
-			null, 
+			null, //no hay array
 			$theme_data->get('1.0'));
 
 		//llamar estilos bootstrap_css
@@ -26,10 +25,9 @@
 	}
 
 	add_action('wp_enqueue_scripts', 'dl_enqueue_style');
+	///////////////////////////////////////////////////////////
 
-	//Incorporar JS
-
-	//Registrar JS
+	/////////////Incorporar JS/////////////
 	function dl_enqueue_scripts() {
 		$theme_data = wp_get_theme();
 
@@ -59,5 +57,6 @@
 		wp_enqueue_script('scripts');
 	}
 
-	add_action('wp_enqueue_script', 'dl_enqueue_scripts')
+	add_action('wp_enqueue_scripts', 'dl_enqueue_scripts')
+	//////////////////////////////////////////////////////7
 ?>
